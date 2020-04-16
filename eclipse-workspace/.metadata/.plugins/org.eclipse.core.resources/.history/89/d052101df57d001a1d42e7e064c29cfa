@@ -1,0 +1,8 @@
+package com.springapirest.models.services;
+
+public interface IClienteService {
+	
+	
+	
+
+}
