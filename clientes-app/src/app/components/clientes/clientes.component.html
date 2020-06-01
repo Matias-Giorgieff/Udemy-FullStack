@@ -7,7 +7,11 @@
             <button [routerLink]="['/clientes/form']" class="btn btn-rounded btn-primary" type="button">Crear Cliente</button>
         </div>
 
-        <table class="table table-bordered table-sp">
+        <div *ngIf="clientes?.length == 0" class="alert alert-info">
+            No hay registros en la BDD
+        </div>
+
+        <table class="table table-bordered table-sp" *ngIf="clientes?.length>0">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -30,7 +34,7 @@
                         <button type="button" name="button" [routerLink]="['/clientes/form', cliente.id]" class="btn btn-primary">Editar</button>
                     </td>
                     <td>
-                        <button type="button" name="button" class="btn btn-primary">Eliminar</button>
+                        <button (click)="delete(cliente)" type="button" name="button" class="btn btn-danger">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

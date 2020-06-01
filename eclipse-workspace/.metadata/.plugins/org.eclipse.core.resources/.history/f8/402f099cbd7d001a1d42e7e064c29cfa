@@ -1,5 +1,0 @@
-package com.springapirest.models.entity;
-
-public class Cliente {
-
-}

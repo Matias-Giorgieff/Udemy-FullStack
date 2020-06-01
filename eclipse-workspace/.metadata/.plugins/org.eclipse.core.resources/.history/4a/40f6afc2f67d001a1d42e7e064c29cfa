@@ -1,7 +1,0 @@
-package com.springapirest.models.services;
-
-public class ClienteServiceImpl  implements IClienteService{
-
-	
-	
-}

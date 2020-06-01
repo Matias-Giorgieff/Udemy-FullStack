@@ -37,4 +37,8 @@ export class ClienteService {
   update(cliente: Cliente): Observable<Cliente>{
     return this._HttpClient.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders});
   }
+
+  delete(id: number): Observable<Cliente>{
+    return this._HttpClient.delete<Cliente>(`${this.urlEndPoint}/${id}`, {headers: this.httpHeaders});
+  }
 }

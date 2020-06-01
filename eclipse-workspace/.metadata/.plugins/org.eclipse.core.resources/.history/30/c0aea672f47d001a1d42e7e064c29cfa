@@ -1,5 +1,0 @@
-package com.springapirest.models.dao;
-
-public interface IClienteDao {
-
-}
